@@ -7,7 +7,7 @@
       </v-card>
       <v-card>
         <v-card-title class="headline">
-          {{ message }}
+          {{ message }} - {{version}}
         </v-card-title>
         <v-card-text>
           <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
@@ -84,11 +84,12 @@ export default {
   name: 'IndexPage',
   data() {
     return {
-      message: ""
+      message: "",
+      version: 1.0
     }
   },
   asyncData(ctx) {
-   return  Axios.get("https://localhost:44321/api/home")
+   return  Axios.get("http://localhost:15089/api/home")
       .then(res=>{
         return {message:res.data};
       })
