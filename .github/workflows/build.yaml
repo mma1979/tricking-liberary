@@ -12,6 +12,6 @@ jobs:
       - name: List field in Directory
         run: ls
       - name: Check dotnet
-        run: dotnet
+        run:  dotnet --version
       - name: Check npm
-        run: npm
+        run: npm -v
